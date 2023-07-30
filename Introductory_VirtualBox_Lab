@@ -1,0 +1,30 @@
+# Introductory Network Configuration with VirtualBox
+
+## Introduction
+  Start with a clear and descriptive title that summarizes the purpose of the lab.
+  Write a brief introduction outlining the objectives of the lab and any important context.
+Objective
+  State the main goal or objectives of the lab in a concise manner.
+  An introductory project to learn VirtualBox 7.0.8 and how 
+## Equipment/Software Used
+- VirtualBox 7.0.8
+- Windows 10
+- Ubuntu 22.04.2
+
+## Methodology
+  Instead of a step-by-step account of every action, group your actions into logical sections or tasks.
+  Use headings and subheadings to separate different parts of the lab.
+--Commands and Configuration
+  Rather than listing every single command attempted, focus on the final, correct commands that achieved the desired results.
+  Include explanations for the commands used, especially if they are non-standard or less commonly known.
+## Errors and Solutions
+  Document any errors or issues you encountered during the lab, and provide the solutions or troubleshooting steps you took to resolve them.
+  This is valuable information for others facing similar challenges.
+## Results
+  Clearly present the final outcomes and results of your lab work.
+  Include any relevant screenshots or logs if they contribute to a better understanding of the results.
+## Conclusion
+  Summarize the main findings and lessons learned from the lab.
+  Mention any insights or improvements for future attempts at similar tasks.
+## Optional: Additional Resources
+  If applicable, provide links to external sources or documentation that could be helpful for someone reading your lab report.
