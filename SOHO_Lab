@@ -17,7 +17,7 @@ connected to the network to experiment with various network protocols, security 
     The option "Obtain an IP address automatically" was applied to allow automatic IP assignment.
     The preferred DNS server was set to 192.168.100.0, and the option to validate settings upon exit was selected.
 <picture>
-    <src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+    <src="https://github.com/EricKarlsson94/NetworkingLab/blob/main/Pictures/Win10VM_NetworkConfig.png">
 </picture>
 
 ## 3. Ubuntu VM Setup
@@ -26,7 +26,7 @@ connected to the network to experiment with various network protocols, security 
     A new wired connection profile was added.
     For IPv4 settings, the "Automatic (DHCP)" method was selected, and the DNS server was set to 192.168.100.0, but automatic DNS was turned off.
 <picture>
-    <src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+    <src="https://github.com/EricKarlsson94/NetworkingLab/blob/main/Pictures/UbuntuVM_NetworkConfig.png">
 </picture>
 
 ## 4. Connectivity Verification
