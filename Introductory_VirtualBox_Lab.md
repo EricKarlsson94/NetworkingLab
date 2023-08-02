@@ -18,16 +18,11 @@ The "pywin32" package was then installed via pip after navigating to the Python 
 
 ### Windows 10 VM
 
-    VirtualBox was launched, and a new VM for Windows 10 was created. The VM's RAM was set to 2048 MB, and the CPU usage was set to 1 CPU.
-    A virtual disk of 10 GB was initially created, but due to insufficient disk size, it was increased to 20 GB.
-    The Windows 10 VM was powered on, and the installation of Windows 10 was carried out using an ISO file downloaded from the Microsoft website.
-    The VM's network adapter settings were configured to use the "Internal Network" mode.
+VirtualBox was launched, and a new VM for Windows 10 was created. The VM's RAM was set to 2048 MB, and the CPU usage was set to 1 CPU. A virtual disk of 10 GB was initially created, but due to insufficient disk size, it was increased to 20 GB. The Windows 10 VM was powered on, and the installation of Windows 10 was carried out using an ISO file downloaded from the Microsoft website. The VM's network adapter settings were configured to use the "Internal Network" mode.
 
 ### Ubuntu 22.04.2 VM
 
-    A new VM for Ubuntu 22.04.2 was created with 2048 MB of RAM and 1 CPU. A virtual disk of 20 GB was allocated for the VM.
-    The Ubuntu 22.04.2 VM was powered on, and the installation process was completed using the downloaded Ubuntu ISO file.
-    The VM's network adapter settings were configured to use the "Internal Network" mode.
+A new VM for Ubuntu 22.04.2 was created with 2048 MB of RAM and 1 CPU. A virtual disk of 20 GB was allocated for the VM. The Ubuntu 22.04.2 VM was powered on, and the installation process was completed using the downloaded Ubuntu ISO file. The VM's network adapter settings were configured to use the "Internal Network" mode.
 
 ## 4. Networking Configuration
 
@@ -37,24 +32,18 @@ The networking mode was changed to "Host-Only," and the IP address of the VB Hos
 ## 5. Troubleshooting Networking Issues
 
 ### Windows 10 VM Configuration
-    The IP address of the Windows 10 VM was set to 192.168.100.2, but communication was not successful.
-    Several attempts were made to add a default route, but they resulted in "Operation not permitted" errors.
+The IP address of the Windows 10 VM was set to 192.168.100.2, but communication was not successful. Several attempts were made to add a default route, but they resulted in "Operation not permitted" errors.
 
 ### Ubuntu 22.04.2 VM Configuration
 
-    The Ubuntu VM experienced issues opening the terminal due to a Python-related problem, which was resolved by changing the system's region and language settings.
-    Network interface "enp0s3" was identified, but attempts to configure the IP address failed with "RTNETLINK" errors.
+The Ubuntu VM experienced issues opening the terminal due to a Python-related problem, which was resolved by changing the system's region and language settings. Network interface "enp0s3" was identified, but attempts to configure the IP address failed with "RTNETLINK" errors.
 
-    The user "admin1" was added to the "sudo" group, but there was still no success in adding a default route.
-    The VM was restarted and accessed in recovery mode. The "admin1" user was already in the "sudo" group.
-    Eventually, using "sudo," the default route was successfully added, and the network interface was brought up.
+The user "admin1" was added to the "sudo" group, but there was still no success in adding a default route. The VM was restarted and accessed in recovery mode. The "admin1" user was already in the "sudo" group. Eventually, using "sudo," the default route was successfully added, and the network interface was brought up.
 
-    After several attempts, it was discovered that the Ubuntu VM had DHCP enabled, causing the IP address to change automatically.
-    The "Host-Only" mode was selected for the Ubuntu VM, and communication between the VMs was established.
+After several attempts, it was discovered that the Ubuntu VM had DHCP enabled, causing the IP address to change automatically. The "Host-Only" mode was selected for the Ubuntu VM, and communication between the VMs was established.
 
 ## 6. Final Configuration
-    The Windows firewall was identified as the cause of ping failures between the VMs, and it was resolved by allowing the necessary traffic.
-    After fixing the networking issues and changing the VMs' networking mode to "Host-Only," communication between the VMs and the host machine was successful.
+The Windows firewall was identified as the cause of ping failures between the VMs, and it was resolved by allowing the necessary traffic. After fixing the networking issues and changing the VMs' networking mode to "Host-Only," communication between the VMs and the host machine was successful.
 
 # Conclusion
 The setup and configuration of VirtualBox and two VMs (Windows 10 and Ubuntu 22.04.2) were completed. After resolving initial networking issues, 
