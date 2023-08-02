@@ -51,9 +51,3 @@ The network was designed using a router with the NAT network mode, and DHCP and 
 Connectivity between the Windows and Linux VMs was established, demonstrating proper networking setup.
 However, the firewall configuration on the individual VMs presented challenges and limitations. It was concluded that firewall security should be
 handled by a dedicated firewall or the domain controller for better security and management.
-
-Future Considerations:
-
-In future experiments, it would be beneficial to explore and implement alternative firewall solutions, such as a dedicated firewall
-or a domain controller with centralized firewall management. Additionally, experimenting with different network modes and security
-protocols could enhance the understanding and security of the network infrastructure.
