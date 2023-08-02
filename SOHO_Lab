@@ -1,6 +1,6 @@
 #Introduction:
 
-The objective of this lab was to design and build a Small Office/Home Office (SOHO) Network infrastructure for a home office or small office environment.
+The objective of this lab was to design and build a simply Small Office/Home Office (SOHO) Network infrastructure for a home office or small office environment.
 The network was set up using a router, and network services such as DHCP and DNS were configured. Multiple computers running Windows and Linux were
 connected to the network to experiment with various network protocols, security settings, and firewall configurations.
 
