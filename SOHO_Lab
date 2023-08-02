@@ -1,16 +1,10 @@
-Abstract:
+Introduction:
 
 The objective of this lab was to design and build a Small Office/Home Office (SOHO) Network infrastructure for a home office or small office environment.
 The network was set up using a router, and network services such as DHCP and DNS were configured. Multiple computers running Windows and Linux were
 connected to the network to experiment with various network protocols, security settings, and firewall configurations.
 
-Introduction:
-
-A Small Office/Home Office (SOHO) Network is essential for small businesses or home offices to facilitate efficient communication and
-resource sharing among connected devices. The network infrastructure was designed to use a router with specific network modes,
-and considerations were given to choose the appropriate mode for the setup.
-
-Methods:
+Procedure:
 1. Network Infrastructure Setup
 
     A NAT network interface was created with the IP address range 192.168.100.0/24.
