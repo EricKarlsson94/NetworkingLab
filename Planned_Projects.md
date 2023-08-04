@@ -12,8 +12,8 @@
 
 #3 Create a Multi-Platform File Sharing System
   - [x] Lab Status: Complete
-  - [ ] Lab Report status: Started
-  - Report:
+  - [x] Lab Report status: Complete
+  - Report: FileShare_Lab
 
 #4 Configure a Virtual Private Network (VPN)
   - [ ] Lab Status: Not started
