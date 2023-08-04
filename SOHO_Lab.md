@@ -12,11 +12,13 @@ A NAT network interface was created with the IP address range 192.168.100.0/24. 
 ## 2. Windows 10 VM Setup
 
 In the Windows 10 VM, the network settings were accessed by going to "ncpa.cpl". The option "Obtain an IP address automatically" was applied to allow automatic IP assignment. The preferred DNS server was set to 192.168.100.0, and the option to validate settings upon exit was selected.
+
 ![Screenshot of the Windows 10 VM network configuration](https://github.com/EricKarlsson94/NetworkingLab/blob/main/Pictures/Win10VM_NetworkConfig.png)
 
 ## 3. Ubuntu VM Setup
 
 In the Ubuntu VM, the network settings were accessed through the settings program. A new wired connection profile was added.For IPv4 settings, the "Automatic (DHCP)" method was selected, and the DNS server was set to 192.168.100.0, but automatic DNS was turned off.
+
 ![Screenshot of the Ubuntu VM network configuration](https://github.com/EricKarlsson94/NetworkingLab/blob/main/Pictures/UbuntuVM_NetworkConfig.png)
 
 ## 4. Connectivity Verification
