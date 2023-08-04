@@ -84,12 +84,12 @@ Bookmarked the shared folder in Ubuntu by right-clicking on "Shared" and selecti
 # Results:
 
 The lab project was successful in setting up cross-platform file sharing between the Windows 10 and Ubuntu virtual 
-using Samba and NFS technologies. Both VMs were able to access and modify files in each other's shared folders.
+using Samba. Both VMs were able to access and modify files in each other's shared folders.
 
 # Conclusion:
 
 The objectives of the lab project were accomplished, and a functional cross-platform file-sharing system was
 established between the Windows 10 and Ubuntu virtual machines. This demonstrated the effectiveness and usability
-of Samba and NFS in enabling seamless collaboration between different operating systems in a networked environment.
+of Samba in enabling seamless collaboration between different operating systems in a networked environment.
 File sharing is essential in various scenarios, and the implemented setup can be useful for organizations or
 individuals requiring efficient data exchange between Windows and Linux platforms.
