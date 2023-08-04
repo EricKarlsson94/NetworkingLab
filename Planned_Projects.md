@@ -11,8 +11,8 @@
   - Report: SOHO_Lab
 
 #3 Create a Multi-Platform File Sharing System
-  - [ ] Lab Status: Not started
-  - [ ] Lab Report status: Not started
+  - [x] Lab Status: Complete
+  - [ ] Lab Report status: Started
   - Report:
 
 #4 Configure a Virtual Private Network (VPN)
