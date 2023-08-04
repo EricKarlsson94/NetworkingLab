@@ -1,18 +1,17 @@
 # MultiPlatform Filesharing between Windows and Ubuntu
 
-## Abstract:
-
-The aim of this lab project was to establish cross-platform file sharing between a Windows 10 virtual machine (VM)
-and a Linux VM using technologies like Samba and NFS. The primary objective was to share a folder named "Shared Folder"
-from the Windows 10 VM to the Linux VM and vice versa. This report outlines the setup process and the successful establishment of the file-sharing system.
-
 ## Introduction:
 
 Cross-platform file sharing is a critical aspect of networked environments where multiple operating systems need to
 collaborate and share data seamlessly. Samba and NFS are well-established technologies that enable file sharing between
-Windows and Linux systems. This lab project utilized these technologies to achieve efficient and convenient file sharing.
+Windows and Linux systems. This lab project utilized Samba to achieve efficient and convenient file sharing.
 
-## Methodology:
+The aim of this lab project was to establish cross-platform file sharing between a Windows 10 virtual machine (VM)
+and a Linux VM using Samba. The primary objective was to share a folder named "Shared Folder"
+from the Windows 10 VM to the Linux VM and vice versa. 
+This report outlines the setup process and the successful establishment of the file-sharing system.
+
+## Procedure:
 ### 1. Setup of Shared Folder in the Windows 10 VM:
 
     Created a folder named "Shared Folder" within the Windows 10 VM.
@@ -65,6 +64,9 @@ Typed the following path in the address bar to access the shared file from the L
       \\192.168.100.5\sambashare
 
 Successfully accessed the shared folder and added a test file named "testfile" from the Windows VM, which appeared in the "sambashare" folder of the Ubuntu VM.
+
+![Screenshot of the sambashare folder on both VMs](https://github.com/EricKarlsson94/NetworkingLab/blob/main/Pictures/ubuntu_to_windows_fileshare.png)
+
 Created a new network location on the Windows VM by:
       Right-clicking on "This PC."
       Adding a custom network location: \\192.168.100.5.\sambashare named "Sambashare."
@@ -78,6 +80,8 @@ Entered the following location to access the shared folder from the Windows VM:
 
 Successfully accessed the shared folder and created a folder named "testfolder" within the "Shared" folder, which was visible in the Windows VM.
 Bookmarked the shared folder in Ubuntu by right-clicking on "Shared" and selecting "Mount."
+
+![Screenshot of the sambashare folder on both VMs](https://github.com/EricKarlsson94/NetworkingLab/blob/main/Pictures/windows_to_ubuntu_fileshare.png)
 
 ## Results:
 
