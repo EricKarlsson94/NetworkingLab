@@ -15,8 +15,13 @@
   - [x] Lab Report status: Complete
   - Report: FileShare_Lab
 
+#4 Configure a Certificate Authority
+  - [ ] Lab Status: Not started
+  - [ ] Lap Report status: Not started
+  - Report:  
+
 #4 Configure a Virtual Private Network (VPN)
-  - [ ] Lab Status: Started
+  - [ ] Lab Status: Put on hold.
   - [ ] Lab Report status: Not started
   - Report:
 
