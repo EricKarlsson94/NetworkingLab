@@ -20,47 +20,47 @@
   - [ ] Lap Report status: Not started
   - Report:  
 
-#4 Configure a Virtual Private Network (VPN)
+#5 Configure a Virtual Private Network (VPN)
   - [ ] Lab Status: Put on hold.
   - [ ] Lab Report status: Not started
   - Report:
 
-#5 Containerize a Simple Application with Docker
+#6 Containerize a Simple Application with Docker
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#6 Deploy a Multi-Container Application with Docker Compose
+#7 Deploy a Multi-Container Application with Docker Compose
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#7 Implement Network Monitoring and Management
+#8 Implement Network Monitoring and Management
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#8 Build a Web Server Cluster
+#9 Build a Web Server Cluster
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#9 Create a Virtual Firewall
+#10 Create a Virtual Firewall
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#10 Build a Microservices Architecture with Docker and Kubernetes
+#11 Build a Microservices Architecture with Docker and Kubernetes
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#11 Combine VMs and Docker for Versatile Virtualization
+#12 Combine VMs and Docker for Versatile Virtualization
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#12 Implement Continuous Integration and Deployment (CI/CD) with Docker and Jenkins
+#13 Implement Continuous Integration and Deployment (CI/CD) with Docker and Jenkins
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
