@@ -35,22 +35,22 @@
   - [ ] Lab Report status: Not started
   - Report:
 
-#8 Combine VMs and Docker for Versatile Virtualization
+#8 Containerize a Simple Application with Docker
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#9 Containerize a Simple Application with Docker
+#9 Deploy a Multi-Container Application with Docker Compose
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#10 Deploy a Multi-Container Application with Docker Compose
+#10 Build a Microservices Architecture with Docker and Kubernetes
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#11 Build a Microservices Architecture with Docker and Kubernetes
+#11 Combine VMs and Docker for Versatile Virtualization
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
