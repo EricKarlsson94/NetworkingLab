@@ -16,7 +16,7 @@
   - Report: FileShare_Lab
 
 #4 Configure a Virtual Private Network (VPN)
-  - [ ] Lab Status: Not started
+  - [ ] Lab Status: Started
   - [ ] Lab Report status: Not started
   - Report:
 
