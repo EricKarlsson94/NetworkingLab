@@ -20,12 +20,12 @@
   - [ ] Lab Report status: Not started
   - Report:
 
-#5 Build a Web Server Cluster
+#5 Containerize a Simple Application with Docker
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#6 Create a Virtual Firewall
+#6 Deploy a Multi-Container Application with Docker Compose
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
@@ -35,12 +35,12 @@
   - [ ] Lab Report status: Not started
   - Report:
 
-#8 Containerize a Simple Application with Docker
+#8 Build a Web Server Cluster
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
 
-#9 Deploy a Multi-Container Application with Docker Compose
+#9 Create a Virtual Firewall
   - [ ] Lab Status: Not started
   - [ ] Lab Report status: Not started
   - Report:
