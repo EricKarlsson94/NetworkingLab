@@ -16,7 +16,7 @@
   - Report: FileShare_Lab
 
 #4 Configure a Certificate Authority
-  - [ ] Lab Status: Not started
+  - [ ] Lab Status: Started
   - [ ] Lap Report status: Not started
   - Report:  
 
