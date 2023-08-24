@@ -1,67 +1,80 @@
-# Lab Report: Configuring SSH, Setting Up a Certificate Authority, and Achieving Interoperability Between Ubuntu and Windows 10
+# Introduction
 
-# Network Configuration:
+This lab report outlines the process of setting up SSH (Secure Shell) communication and a Certificate Authority (CA) for interoperability between Ubuntu and Windows 10 virtual machines. The primary goal is to establish secure communication between these two operating systems using SSH keys and certificates.
+Ubuntu Setup
+## Initial Setup
 
-    The network mode was set to "bridged" to enable internet access when downloading files.
-    The network mode was switched to "NAT Network" to limit communications for testing purposes.
+Following the guide [Initial Server Setup with Ubuntu 22.04 (digitalocean.com)](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-22-04), initial configuration of UbuntuVM2 was performed.
 
-# Ubuntu Setup:
+Attempting SSH connection using the command
+    "ssh root@192.168.100.7"
+was initially refused.
 
-Initial server setup was performed on UbuntuVM2 following the guide linked.
-SSH was installed using the commands:
+Installed SSH using:
+    "sudo apt update", 
+    "sudo apt install ssh"
+and allowed SSH traffic through the firewall with 
+    "sudo ufw allow 22".
 
-  sudo apt update
-  sudo apt install ssh
-  sudo ufw allow 22
+Modified SSH configuration to allow root login by changing "#PermitRootLogin" to "PermitRootLogin yes" and restarting the sshd service.
 
-Root login issue was resolved by modifying the SSH configuration and allowing root login.
-User "admvm2" was created using the command:
+Added user "admvm2" using 
+    "adduser admvm2"
+granting sudo privileges with 
+    "usermod -aG sudo admvm2".
 
-  sudo adduser admvm2
+## Setting up SSH Keys
 
-Sudo privileges were granted to "admvm2" using:
+Generated SSH keys on UbuntuVM2 using "ssh-keygen".
 
-  sudo usermod -aG sudo admvm2
+Copied the public key to UbuntuVM1 using "ssh-copy-id admin1@192.168.100.7".
 
-Firewall was configured using UFW.
+Disabled password authentication by modifying "/etc/ssh/sshd_config" and changing "#PasswordAuthentication yes" to "PasswordAuthentication no".
 
-# SSH Key Setup:
+## Setting up the CA
 
-SSH keys were generated on UbuntuVM2 using the command:
+Installed easy-rsa on UbuntuVM2 with "sudo apt install easy-rsa".
 
-  ssh-keygen
+Created symbolic link between "/usr/share/easy-rsa/" and "~/easy-rsa/".
 
-SSH key was copied to UbuntuVM1 using:
+Restricted access to "~/easy-rsa/" using "chmod 700 /home/admvm2/easy-rsa".
 
-  ssh-copy-id admin1@192.168.100.7
+Initialized the PKI with "./easyrsa init-pki".
 
-Password authentication was disabled by modifying the SSH configuration.
+Created a "vars" file in "~/easy-rsa/" with specific variables.
 
-# Setting Up the Certificate Authority (CA) on Ubuntu:
+Built the CA with "./easyrsa build-ca", providing passphrase and leaving CN as default.
 
-EasyRSA was installed and configured. A symbolic link was created to the installation directory.
-The PKI was initialized and configured with necessary variables.
-The CA was built using EasyRSA.
-The CA certificate was copied to UbuntuVM2 and added to the certificate store.
+Imported the CA certificate to UbuntuVM2 using "cat ~/easy-rsa/pki/ca.crt" and copying it to "/tmp/ca.crt".
 
-# Windows 10 Setup:
+Updated certificate storage with "sudo cp /tmp/ca.crt /usr/local/share/ca-certificates/" and "sudo update-ca-certificates".
 
-OpenSSH was installed on Win10VM1 using PowerShell commands.
-The OpenSSH.Server capability was added using PowerShell.
-SSH keys were generated on Win10VM1 using PowerShell.
-SSH agent was set up, and the generated key was added to the agent.
-SSH connection was established to UbuntuVM1 after solving network mode and firewall issues.
+# Windows 10 Setup
+## Setting up SSH Keys
 
-# Interoperability: Windows 10 to Ubuntu:
+Installed OpenSSH on Win10VM1 using PowerShell.
 
-CA certificate was copied from UbuntuVM2 to Win10VM2 and imported into the certificate store.
-Win10VM2 was able to connect to UbuntuVM1 without fingerprint checks.
+Generated SSH key with "ssh-keygen -t ed25519" and started ssh-agent with "ssh-agent" and "ssh-add".
 
-#Interoperability: Ubuntu to Windows 10:
-An SSH key pair was generated on UbuntuVM1.
-The public key was copied to Win10VM1 using "ssh-copy-id".
-SSH agent was set up on UbuntuVM1 and the key was added.
-SSH connection was established from UbuntuVM1 to Win10VM1 without fingerprint checks.
+Manually exchanged SSH keys between Win10VM1 and Win10VM2.
 
-# Conclusion:
-In this lab, we successfully configured SSH on Ubuntu and Windows 10 virtual machines, set up a Certificate Authority (CA) on Ubuntu, and established interoperability between the two platforms. SSH key pairs were generated, authentication methods were configured, and certificates were managed to enable secure communication between the virtual machines. This experience enhances our understanding of network configurations, security measures, and interoperability considerations in mixed-platform environments.
+# Interoperability Setup
+## Windows 10 to Ubuntu
+
+Tested SSH connection from Win10VM2 to UbuntuVM1 using "ssh admvm2@192.168.100.7".
+
+Imported CA certificate "tmp_ca.crt" into Windows certificate storage.
+
+## Ubuntu to Windows 10
+
+Generated SSH key on UbuntuVM1 named "target_id_ed25519".
+
+Copied the public key to Win10VM1 using "ssh-copy-id admin@192.168.100.6".
+
+Setup ssh-agent on UbuntuVM1 with "ssh-add ~/target_id_ed25519".
+
+Established SSH connection from UbuntuVM1 to Win10VM1.
+
+# Conclusion
+
+The lab successfully achieved SSH-based interoperability between Ubuntu and Windows 10 virtual machines through the setup of SSH keys and a Certificate Authority. SSH keys were generated, exchanged, and stored securely, allowing passwordless communication between the VMs. Additionally, a Certificate Authority was established to enhance security and ensure trust between the systems. This project provides a foundation for future projects involving secure communication and interoperability between different operating systems.
